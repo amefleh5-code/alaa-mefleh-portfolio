@@ -205,6 +205,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .detail-copy section { padding:0 0 30px; margin:0 0 30px; border-bottom:1px solid var(--line); }
 .detail-copy h2 { font-size:1.25rem; margin:0 0 10px; }
 .detail-copy p { color:var(--muted); line-height:1.75; }
+.results-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:18px; }
+.results-heading h2 { margin:0; }
+.results-heading > p { max-width:340px; margin:0; font-size:.86rem; }
+.results-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.result-card { min-width:0; padding:18px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(145deg,rgba(103,182,230,.1),rgba(14,28,43,.75)); }
+.result-card small { display:block; min-height:2.5em; color:var(--muted); font-size:.7rem; line-height:1.35; text-transform:uppercase; letter-spacing:.07em; }
+.result-card strong { display:block; margin:10px 0 8px; color:var(--accent-2); font-size:clamp(1.65rem,3vw,2.3rem); line-height:1; letter-spacing:-.04em; }
+.result-card strong span { font-size:.45em; letter-spacing:0; color:var(--text); }
+.result-card p { margin:0; font-size:.77rem; line-height:1.55; }
 .detail-aside { position:sticky; top:105px; align-self:start; border:1px solid var(--line); border-radius:18px; padding:20px; background:var(--panel); }
 .detail-aside dl { margin:0; display:grid; gap:14px; }
 .detail-aside dt { color:var(--muted); font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; }
@@ -228,6 +237,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .contact-grid { grid-template-columns:1fr; }
   .detail-layout { grid-template-columns:1fr; }
   .detail-aside { position:static; }
+  .results-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -256,6 +266,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer-inner { flex-direction:column; }
   .project-grid { grid-template-columns:1fr; }
   .project-gallery { grid-template-columns:1fr; }
+  .results-heading { display:block; }
+  .results-heading > p { margin-top:8px; }
+  .results-grid { grid-template-columns:1fr; }
   .page-hero { padding-top:48px; }
 }
 
