@@ -195,6 +195,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .project-detail { padding-bottom:80px; }
 .project-cover { aspect-ratio: 21/9; border:1px solid var(--line); border-radius:24px; display:grid; place-items:center; background:linear-gradient(145deg, rgba(103,182,230,.10), rgba(14,28,43,.8)); color:var(--muted); overflow:hidden; }
+.project-cover-image { aspect-ratio:auto; margin:0; display:block; background:#0b1724; }
+.project-cover-image img { display:block; width:100%; height:min(68vh,680px); object-fit:contain; background:#0b1724; }
+.project-cover-image figcaption { padding:12px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:.8rem; }
 .project-cover-video { aspect-ratio:auto; margin:0; display:block; background:#0b1724; }
 .project-cover-video video { display:block; width:100%; max-height:72vh; aspect-ratio:16/9; object-fit:contain; background:#0b1724; }
 .project-cover-video figcaption { padding:12px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:.8rem; }
