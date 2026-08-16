@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Piping flexibility and stress analysis of an insulated chilled-water system for a data center in accordance with ASME B31.1, optimizing support arrangements under thermal contraction.">
+  <title>Data Center Chilled-Water Piping Stress Analysis | Ala'Aldin Mefleh</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../../../index.html" aria-label="Ala'Aldin Mefleh home">
+      <span class="brand-mark">AM</span>
+      <span class="brand-copy"><strong>Ala'Aldin Mefleh</strong><span>Steel Structure &amp; FEA Engineer</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="../index.html">Piping Stress</a>
+      <a href="../../../index.html#projects">Projects</a>
+      <a href="../../../index.html#skills">Skills</a>
+      <a href="../../../index.html#experience">Experience</a>
+      <a href="../../../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="mailto:amefleh5@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="project-detail">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="../../../index.html">Home</a> / <a href="../index.html">Piping Stress Analysis Projects</a> / Data Center Chilled-Water Piping Stress Analysis</div>
+      <div class="kicker">Piping flexibility · Stress analysis · ASME B31.1</div>
+      <h1>Data Center Chilled-Water Piping Stress Analysis</h1>
+      <p>Comprehensive piping flexibility, thermal contraction, and restraint optimization for an insulated chilled-water distribution system serving a data center facility.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <figure class="project-cover project-cover-image">
+      <img src="media/piping-sa-iso-view.png" alt="Isometric 3D view of the complete data center chilled water piping stress model">
+      <figcaption>Complete 3D isometric stress model of the data center chilled-water distribution piping network.</figcaption>
+    </figure>
+
+    <div class="detail-layout">
+      <div class="detail-copy">
+        <section id="project-overview">
+          <h2>Project overview</h2>
+          <p>This project involved a comprehensive piping flexibility and stress analysis of an insulated chilled-water system serving a data-center facility. The network comprised 14-inch and 12-inch main headers with 6-inch branches, constructed from ASTM A53 Grade B carbon-steel piping and assessed in accordance with ASME B31.1.</p>
+          <p>The system was evaluated for design and operating conditions including internal pressure, dead weight, insulation weight, hydrotest loading, thermal effects, wind, and seismic actions applicable to the Riyadh location.</p>
+          <p>A key design challenge was the high load generated at several restraints by thermal contraction. With an ambient reference temperature of 50°C and chilled-water operating temperatures of 20°C supply and 28°C return, the piping experienced significant contraction during operation.</p>
+          <p>Because modification of the piping route or expansion-loop geometry was not feasible due to spatial and physical coordination constraints, multiple stress-analysis iterations were completed to optimize the support and restraint arrangement. Simple rests, guides, guide-and-limit-stop combinations, and PTFE sliding supports were evaluated while maintaining the applicable support-spacing requirements.</p>
+          <p>The resulting support strategy provided the required system flexibility, controlled restraint reactions, and maintained piping-code compliance with a governing stress ratio of 55.20% without changing the coordinated pipe routing.</p>
+        </section>
+
+        <section id="design-demands">
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Design &amp; operating conditions</div>
+              <h2>Verified project inputs</h2>
+            </div>
+            <p>Piping parameters and environmental criteria for the data center facility in Riyadh.</p>
+          </div>
+          <div class="design-demand-grid">
+            <article class="result-card">
+              <small>Main headers</small>
+              <strong>14 &amp; 12 <span>in</span></strong>
+              <p>14" (DN350) and 12" (DN300) primary chilled-water supply &amp; return headers.</p>
+            </article>
+            <article class="result-card">
+              <small>Branch piping</small>
+              <strong>6 <span>in</span></strong>
+              <p>6" (DN150) branch connections serving data hall cooling equipment.</p>
+            </article>
+            <article class="result-card">
+              <small>Operating temperatures</small>
+              <strong>20 / 28 <span>°C</span></strong>
+              <p>20°C chilled-water supply and 28°C return operating conditions.</p>
+            </article>
+            <article class="result-card">
+              <small>Ambient reference</small>
+              <strong>50 <span>°C</span></strong>
+              <p>Maximum ambient / installation reference temperature for thermal baseline.</p>
+            </article>
+            <article class="result-card">
+              <small>Design pressure</small>
+              <strong>8.7 <span>bar</span></strong>
+              <p>Internal design operating pressure for sustained stress evaluation.</p>
+            </article>
+            <article class="result-card">
+              <small>Hydrotest pressure</small>
+              <strong>11.3 <span>bar</span></strong>
+              <p>Shop / field hydrostatic test pressure under ambient conditions.</p>
+            </article>
+            <article class="result-card">
+              <small>Piping material</small>
+              <strong>ASTM A53 <span>Gr. B</span></strong>
+              <p>Carbon steel piping with external thermal insulation accounted for in deadweight.</p>
+            </article>
+            <article class="result-card">
+              <small>Environmental site</small>
+              <strong>Riyadh <span>KSA</span></strong>
+              <p>Evaluated for site-specific wind and seismic loading criteria.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="system-configuration">
+          <h2>System configuration</h2>
+          <p>The chilled-water distribution network consists of extensive dual 14-inch and 12-inch main supply and return headers running across the facility, branching into multiple 6-inch connections that interface with data hall air handling units and chillers. The entire system is insulated to prevent condensation and thermal gains in the desert climate.</p>
+        </section>
+
+        <section id="code-and-material">
+          <h2>Applicable code and material</h2>
+          <p>The analysis was conducted in strict accordance with <strong>ASME B31.1 (Power Piping)</strong>, covering pressure integrity, sustained stress limits, thermal expansion/contraction stress ranges, and occasional load allowances. The pipe material is <strong>ASTM A53 Grade B carbon steel</strong>, evaluated with standard code allowable stress values across operating, ambient, and hydrotest temperature conditions.</p>
+        </section>
+
+        <section id="engineering-challenge">
+          <h2>Engineering challenge</h2>
+          <p>The governing challenge was controlling high restraint forces caused by <strong>thermal contraction</strong>. Because the installation and ambient reference temperature reaches 50°C while the operating chilled water flows at 20°C (supply) and 28°C (return), the piping experiences a temperature differential of up to &minus;30°C during service, resulting in continuous contraction along the long header runs.</p>
+          <p>Due to tight spatial clearances and coordination with adjacent building services, modifying the piping route or adding new expansion loops was not permitted. Consequently, all thermal movement, restraint loads, and stresses had to be resolved solely through support arrangement and restraint engineering.</p>
+        </section>
+
+        <section id="analysis-methodology">
+          <h2>Analysis methodology</h2>
+          <p>A complete 3D finite element piping flexibility model was constructed to simulate the entire distribution network. The model incorporated pipe geometry, fittings, valves, flange weights, insulation dead load, fluid contents, internal pressure, thermal contraction ranges, and structural boundary conditions.</p>
+          <ul class="scope-list">
+            <li>Constructed full 3D beam-element piping network covering all 14", 12", and 6" lines with realistic component weights and Stress Intensification Factors (SIFs).</li>
+            <li>Calculated thermal contraction strains for both supply (&Delta;T = &minus;30°C) and return (&Delta;T = &minus;22°C) temperature differentials relative to 50°C installation baseline.</li>
+            <li>Applied internal design pressure (8.7 bar) and hydrostatic test pressure (11.3 bar).</li>
+            <li>Evaluated site-specific occasional actions including Riyadh wind and seismic response spectra.</li>
+            <li>Conducted iterative restraint optimization to minimize reaction forces transmitted to the building structure.</li>
+          </ul>
+        </section>
+
+        <section id="load-cases">
+          <h2>Load cases assessed</h2>
+          <p>The piping system was evaluated across the standard ASME B31.1 load-case categories:</p>
+          <ul class="scope-list">
+            <li><strong>Sustained Condition (SUS):</strong> Pipe self-weight + insulation weight + water contents weight + internal design pressure (8.7 bar).</li>
+            <li><strong>Operating Conditions (OPE):</strong> Sustained loading combined with thermal contraction at 20°C supply and 28°C return temperatures.</li>
+            <li><strong>Thermal Contraction Range (EXP):</strong> Cyclic thermal range between installation reference (50°C) and operational chilled-water states.</li>
+            <li><strong>Hydrotest Condition (HYD):</strong> Pipe self-weight + water filling weight + hydrostatic test pressure (11.3 bar) at ambient condition.</li>
+            <li><strong>Occasional Conditions (OCC):</strong> Sustained loads combined with site-specific wind and seismic forces for the Riyadh location.</li>
+          </ul>
+        </section>
+
+        <section id="thermal-contraction">
+          <h2>Thermal-contraction behaviour</h2>
+          <p>Thermal contraction pulls the piping inward toward rigid anchor points, generating tensile axial forces and substantial lateral shear loads at intermediate directional guides. The analysis identified critical displacement vectors along the long header runs, reaching a maximum displacement of <strong>9.4458 mm at Node 2968</strong>.</p>
+        </section>
+
+        <section id="support-optimization">
+          <h2>Support and restraint optimization</h2>
+          <p>To accommodate thermal contraction while maintaining structural stability under deadweight, hydrotest, and occasional wind/seismic forces, an engineered combination of support types was established:</p>
+          <ul class="scope-list">
+            <li><strong>Simple resting supports:</strong> Provided vertical gravity support while permitting free two-dimensional horizontal thermal movement.</li>
+            <li><strong>Guided supports:</strong> Constrained lateral displacement to maintain alignment along straight header spans while allowing axial contraction.</li>
+            <li><strong>Guide-and-limit-stop combinations:</strong> Permitted controlled thermal movement up to predefined gap thresholds (such as 5.0 mm travel at Node 3630) before engaging to arrest occasional dynamic movement.</li>
+            <li><strong>Sliding supports with PTFE interfaces:</strong> Implemented low-friction PTFE sliding plates to minimize friction-induced horizontal forces transferred into the supporting steel structures.</li>
+          </ul>
+        </section>
+
+        <section id="design-iterations">
+          <h2>Design-iteration process</h2>
+          <p>Multiple engineering iterations were carried out to optimize support locations, restraint spacing, sliding directions, and gap allowances. Support spans were verified against project criteria, constructability limits, and applicable code guidelines. By strategically converting rigid restraints into directional guides and PTFE sliding supports, thermal contraction loads were evenly distributed without altering the fixed piping geometry.</p>
+        </section>
+
+        <section id="verified-results">
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Verified results</div>
+              <h2>Code compliance &amp; stress results</h2>
+            </div>
+            <p>Verified values extracted from the CAESAR II stress analysis report and model outputs.</p>
+          </div>
+
+          <div class="results-grid">
+            <article class="result-card">
+              <small>Peak code stress</small>
+              <strong>155.12 <span>MPa</span></strong>
+              <p>Governing code stress recorded at elbow Node 3940 (Element 3939–3940).</p>
+            </article>
+            <article class="result-card">
+              <small>Code allowable stress</small>
+              <strong>281.01 <span>MPa</span></strong>
+              <p>ASME B31.1 allowable stress limit at governing Node 3940.</p>
+            </article>
+            <article class="result-card">
+              <small>Peak stress ratio</small>
+              <strong>55.20 <span>%</span></strong>
+              <p>Maximum code utilization ratio, confirming safe compliance (&lt; 100%).</p>
+            </article>
+            <article class="result-card">
+              <small>Peak displacement</small>
+              <strong>9.4458 <span>mm</span></strong>
+              <p>Maximum resultant thermal contraction displacement at Node 2968.</p>
+            </article>
+            <article class="result-card">
+              <small>Restraint limit travel</small>
+              <strong>5.0000 <span>mm</span></strong>
+              <p>Controlled axial limit-stop travel allowance at Node 3630.</p>
+            </article>
+            <article class="result-card">
+              <small>Stress factor (SIF)</small>
+              <strong>3.73</strong>
+              <p>In-plane &amp; out-of-plane stress intensification factor at critical elbow elements.</p>
+            </article>
+          </div>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>On Element</th>
+                  <th>Node</th>
+                  <th>Bending Stress (N/mm²)</th>
+                  <th>Torsion Stress (N/mm²)</th>
+                  <th>SIF (In/Out)</th>
+                  <th>Code Stress (N/mm²)</th>
+                  <th>Allowable (N/mm²)</th>
+                  <th>Utilization (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="highlight-cell">3939–3940</td>
+                  <td class="highlight-cell">3940</td>
+                  <td>55.65</td>
+                  <td>-19.42</td>
+                  <td>3.73 / 3.73</td>
+                  <td class="highlight-cell">155.12</td>
+                  <td>281.01</td>
+                  <td class="highlight-cell">55.20% (Governing)</td>
+                </tr>
+                <tr>
+                  <td>3938–3939</td>
+                  <td>3938</td>
+                  <td>25.53</td>
+                  <td>15.41</td>
+                  <td>3.73 / 3.73</td>
+                  <td>117.70</td>
+                  <td>285.15</td>
+                  <td>41.28%</td>
+                </tr>
+                <tr>
+                  <td>3938–3939</td>
+                  <td>3939</td>
+                  <td>21.27</td>
+                  <td>-15.16</td>
+                  <td>3.73 / 3.73</td>
+                  <td>115.07</td>
+                  <td>287.13</td>
+                  <td>40.08%</td>
+                </tr>
+                <tr>
+                  <td>3939–3940</td>
+                  <td>3939</td>
+                  <td>21.27</td>
+                  <td>15.16</td>
+                  <td>3.73 / 3.73</td>
+                  <td>115.07</td>
+                  <td>287.13</td>
+                  <td>40.08%</td>
+                </tr>
+                <tr>
+                  <td>2438–2439</td>
+                  <td>2439</td>
+                  <td>102.76</td>
+                  <td>-0.19</td>
+                  <td>3.73 / 3.73</td>
+                  <td>102.77</td>
+                  <td>286.67</td>
+                  <td>35.85%</td>
+                </tr>
+                <tr>
+                  <td>2439–2440</td>
+                  <td>2439</td>
+                  <td>102.76</td>
+                  <td>0.19</td>
+                  <td>3.73 / 3.73</td>
+                  <td>102.77</td>
+                  <td>286.67</td>
+                  <td>35.85%</td>
+                </tr>
+                <tr>
+                  <td>2440–2449</td>
+                  <td>2449</td>
+                  <td>99.81</td>
+                  <td>-0.72</td>
+                  <td>3.73 / 3.73</td>
+                  <td>99.95</td>
+                  <td>286.57</td>
+                  <td>34.88%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="engineering-outcome">
+          <h2>Final engineering outcome</h2>
+          <p>The iterative support optimization successfully resolved all thermal contraction challenges without requiring modifications to the constrained piping routing or expansion geometry. The final support configuration achieved full <strong>ASME B31.1 code compliance</strong>, with a governing stress ratio of <strong>55.20%</strong> (155.12 N/mm² vs 281.01 N/mm² allowable), controlled maximum thermal displacement within <strong>9.45 mm</strong>, and verified structural restraint reactions across all sustained, thermal, hydrotest, and occasional load conditions.</p>
+        </section>
+
+        <section id="project-gallery">
+          <h2>Clickable technical gallery</h2>
+          <div class="project-gallery">
+            <figure>
+              <img src="media/piping-sa-iso-view.png" alt="Isometric 3D view of the complete data center chilled water piping stress model">
+              <figcaption>Overall 3D isometric piping stress analysis model showing main headers and equipment branches.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/piping-stress-model-headers-branches.png" alt="Isometric view showing node numbers, inline valves, and support restraint arrangements">
+              <figcaption>Piping model detail showing node numbers, valve components, and multi-directional restraint symbols.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/piping-thermal-displacement-node2968.png" alt="Thermal displacement plot showing displacement vectors and maximum displacement of 9.4458 mm at Node 2968">
+              <figcaption>Thermal contraction displacement plot highlighting maximum displacement of 9.4458 mm at Node 2968.</figcaption>
+            </figure>
+            <figure>
+              <img src="media/piping-stress-results-table-node3940.png" alt="Code stress results and element detail at Node 3940 elbow with verified output table">
+              <figcaption>Code stress results and elbow element at Node 3940 (Peak stress 155.12 N/mm² · 55.20% utilization).</figcaption>
+            </figure>
+            <figure>
+              <img src="media/piping-restraint-displacement-node3630.png" alt="Restraint optimization view showing limit-stop travel of 5.0000 mm at Node 3630">
+              <figcaption>Restraint optimization and directional limit-stop displacement view (5.0000 mm at Node 3630).</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <p class="project-note">All stress values, allowable limits, and displacement metrics are verified directly from the CAESAR II piping stress analysis outputs.</p>
+      </div>
+
+      <aside class="detail-aside">
+        <dl>
+          <div>
+            <dt>Category</dt>
+            <dd>Piping Stress Analysis</dd>
+          </div>
+          <div>
+            <dt>Application</dt>
+            <dd>Data Center Chilled Water</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Riyadh, KSA</dd>
+          </div>
+          <div>
+            <dt>Applicable Code</dt>
+            <dd>ASME B31.1</dd>
+          </div>
+          <div>
+            <dt>Main Headers</dt>
+            <dd>14" &amp; 12" (DN350 &amp; DN300)</dd>
+          </div>
+          <div>
+            <dt>Branch Piping</dt>
+            <dd>6" (DN150)</dd>
+          </div>
+          <div>
+            <dt>Pipe Material</dt>
+            <dd>ASTM A53 Grade B</dd>
+          </div>
+          <div>
+            <dt>Operating Temperatures</dt>
+            <dd>20°C Supply / 28°C Return</dd>
+          </div>
+          <div>
+            <dt>Ambient Reference</dt>
+            <dd>50°C (Thermal Contraction)</dd>
+          </div>
+          <div>
+            <dt>Pressures</dt>
+            <dd>8.7 bar Design · 11.3 bar Hydro</dd>
+          </div>
+          <div>
+            <dt>Governing Stress Ratio</dt>
+            <dd>55.20% (155.12 MPa)</dd>
+          </div>
+          <div>
+            <dt>Peak Displacement</dt>
+            <dd>9.4458 mm (Node 2968)</dd>
+          </div>
+          <div>
+            <dt>Optimization</dt>
+            <dd>PTFE Rests, Guides, Limit-Stops</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span data-year></span> Ala'Aldin Abdullah Mefleh Mefleh</span>
+    <a href="../index.html">Back to Piping Stress Analysis projects</a>
+  </div>
+</footer>
+<script src="../../../script.js"></script>
+</body>
+</html>

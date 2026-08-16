@@ -229,6 +229,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-cover-image img { cursor:zoom-in; }
 .project-gallery figcaption { padding:11px 13px; color:var(--muted); font-size:.8rem; border-top:1px solid var(--line); }
 .project-note { padding:16px 18px; border-left:3px solid var(--accent); background:rgba(103,182,230,.06); border-radius:0 12px 12px 0; }
+.data-table-wrapper { overflow-x:auto; border:1px solid var(--line); border-radius:16px; background:rgba(14,28,43,.75); margin:18px 0; }
+.data-table { width:100%; border-collapse:collapse; font-size:.82rem; text-align:left; white-space:nowrap; }
+.data-table th, .data-table td { padding:10px 14px; border-bottom:1px solid var(--line); }
+.data-table th { background:rgba(103,182,230,.08); color:var(--accent-2); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+.data-table tbody tr:last-child td { border-bottom:none; }
+.data-table tbody tr:hover { background:rgba(103,182,230,.04); }
+.data-table .highlight-cell { color:var(--accent-2); font-weight:700; }
 .lightbox-open { overflow:hidden; }
 .image-lightbox { width:100vw; max-width:none; height:100vh; max-height:none; margin:0; padding:18px; border:0; background:rgba(4,10,16,.96); color:var(--text); }
 .image-lightbox::backdrop { background:rgba(4,10,16,.9); }
