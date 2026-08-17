@@ -193,40 +193,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
 .tag { font-size:.72rem; color:var(--accent-2); border:1px solid var(--line); padding:6px 8px; border-radius:999px; }
 
-.featured-project-section { margin-bottom:24px; }
-.project-card-featured {
-  display:grid; grid-template-columns:1.15fr 1fr; border:1px solid var(--line-strong);
-  border-radius:var(--radius-lg); background:linear-gradient(155deg, rgba(18,35,53,.95), rgba(11,23,36,.9));
-  overflow:hidden; text-decoration:none; transition:.25s ease; box-shadow:var(--shadow);
-}
-.project-card-featured:hover {
-  transform:translateY(-3px); border-color:rgba(103,182,230,.58);
-  box-shadow:0 28px 75px rgba(0,0,0,.38), 0 0 0 1px rgba(103,182,230,.2);
-}
-.project-card-featured .project-thumb {
-  aspect-ratio:auto; min-height:100%; position:relative; background:#0b1724;
-  border-right:1px solid var(--line); overflow:hidden; display:flex; align-items:center; justify-content:center;
-}
-.project-card-featured .project-thumb img {
-  width:100%; height:100%; max-height:380px; object-fit:contain; background:#0b1724;
-  transition:transform .3s ease;
-}
-.project-card-featured:hover .project-thumb img { transform:scale(1.02); }
-.project-card-featured .project-body { padding:32px 36px; display:flex; flex-direction:column; justify-content:center; }
-.featured-badge-row { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:12px; }
-.featured-badge {
-  display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px;
-  background:rgba(103,182,230,.12); border:1px solid rgba(103,182,230,.35); color:var(--accent-2);
-  font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-}
-.featured-badge::before { content:"★"; font-size:.72rem; color:var(--accent); }
-.kicker-inline { margin-bottom:0; }
-.project-card-featured .project-body h2 { font-size:clamp(1.3rem, 2vw, 1.7rem); letter-spacing:-.03em; line-height:1.25; margin:0 0 12px; }
-.project-card-featured .project-body p { color:var(--muted); line-height:1.65; font-size:.9rem; margin:0 0 16px; }
-.project-card-featured .project-meta { margin-top:0; margin-bottom:22px; }
-.project-card-featured .project-card-action { margin-top:auto; }
-.project-card-featured .btn-cta { display:inline-flex; align-items:center; gap:8px; width:max-content; }
-
 .project-detail { padding-bottom:80px; }
 .project-cover { aspect-ratio: 21/9; border:1px solid var(--line); border-radius:24px; display:grid; place-items:center; background:linear-gradient(145deg, rgba(103,182,230,.10), rgba(14,28,43,.8)); color:var(--muted); overflow:hidden; }
 .project-cover-image { aspect-ratio:auto; margin:0; display:block; background:#0b1724; }
@@ -300,10 +266,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .skills-grid { grid-template-columns:1fr 1fr; }
   .contact-grid { grid-template-columns:1fr; }
-  .project-card-featured { grid-template-columns:1fr; }
-  .project-card-featured .project-thumb { border-right:none; border-bottom:1px solid var(--line); min-height:280px; }
-  .project-card-featured .project-thumb img { max-height:320px; }
-  .project-card-featured .project-body { padding:26px; }
   .detail-layout { grid-template-columns:minmax(0,1fr); }
   .detail-aside { position:static; }
   .results-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -328,14 +290,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .category-index { font-size:3.4rem; }
   .category-top .btn { grid-column:auto; }
   .category-grid { grid-template-columns:1fr; }
-  .featured-project-section { margin-bottom:18px; }
-  .project-card-featured .project-thumb { min-height:auto; aspect-ratio:16/9; }
-  .project-card-featured .project-thumb img { max-height:none; }
-  .project-card-featured .project-body { padding:20px 18px; }
-  .project-card-featured .project-body h2 { font-size:1.2rem; }
-  .project-card-featured .project-body p { font-size:.86rem; line-height:1.6; }
-  .project-card-featured .project-meta { margin-bottom:18px; }
-  .project-card-featured .btn-cta { width:100%; }
   .project-list { padding:14px; }
   .empty-state { align-items:flex-start; flex-direction:column; }
   .skills-grid { grid-template-columns:1fr; }
