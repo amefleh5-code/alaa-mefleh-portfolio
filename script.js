@@ -7,7 +7,7 @@ const reviewImages = [...document.querySelectorAll('.project-gallery img, .proje
 if (reviewImages.length) {
   const dialog = document.createElement('dialog');
   dialog.className = 'image-lightbox';
-  dialog.setAttribute('aria-label', 'Project image review');
+  dialog.setAttribute('aria-label', 'Project image viewer');
 
   const frame = document.createElement('div');
   frame.className = 'image-lightbox-frame';
@@ -15,7 +15,7 @@ if (reviewImages.length) {
   const closeButton = document.createElement('button');
   closeButton.className = 'image-lightbox-close';
   closeButton.type = 'button';
-  closeButton.setAttribute('aria-label', 'Close image review');
+  closeButton.setAttribute('aria-label', 'Close image viewer');
   closeButton.textContent = '×';
 
   const previousButton = document.createElement('button');
@@ -73,7 +73,7 @@ if (reviewImages.length) {
   reviewImages.forEach((image, index) => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    image.setAttribute('aria-label', `Review full-size image: ${image.alt}`);
+    image.setAttribute('aria-label', `View full-size image: ${image.alt}`);
     image.addEventListener('click', () => openLightbox(image, index));
     image.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
