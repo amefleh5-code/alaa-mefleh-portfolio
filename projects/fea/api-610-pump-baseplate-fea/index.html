@@ -364,15 +364,49 @@
 
           <!-- Subsection: Dynamic Modal Analysis -->
           <h3 style="font-size: 1.05rem; margin: 24px 0 8px; color: var(--accent-2);">Dynamic Modal Frequency Plots</h3>
-          <div class="project-gallery">
-            <figure class="modal-plot-card gallery-span-full">
-              <img src="media/fea-modal-modes-1-2-top-view.png" alt="Dynamic Modal Analysis Top View: Mode 1 (96.28 Hz vs 109.81 Hz) and Mode 2 (109.97 Hz vs 128.40 Hz)" loading="eager" decoding="sync">
-              <figcaption>Modal Shape 1 &amp; 2 deformation plots (Top 3D View): Baseline (96.28 Hz &amp; 109.97 Hz) vs. Optimized (109.81 Hz &amp; 128.40 Hz).</figcaption>
+          <div class="modal-quad-grid">
+            <!-- Top-Left: Mode 1 (No Stiffeners) -->
+            <figure class="modal-plot-card">
+              <div class="modal-plot-img-wrap">
+                <img src="media/fea-modal-mode1-no-stiffeners.png" alt="Mode 1 (No Stiffeners) - Natural Frequency 96.28 Hz (Deformation Scale: 2.65)" loading="eager" decoding="sync">
+              </div>
+              <figcaption class="modal-quad-caption">
+                <strong class="modal-quad-title">Mode 1 (No Stiffeners)</strong>
+                <span class="modal-quad-sub"><em>f</em>₁ = 96.28 Hz · Baseline Flexible Layout</span>
+              </figcaption>
             </figure>
 
-            <figure class="modal-plot-card gallery-span-full">
-              <img src="media/fea-modal-modes-1-2-bottom-view.png" alt="Dynamic Modal Analysis Bottom View: Mode 1 (96.28 Hz vs 109.81 Hz) and Mode 2 (109.97 Hz vs 128.40 Hz)" loading="eager" decoding="sync">
-              <figcaption>Modal Shape 1 &amp; 2 deformation plots (Bottom 3D View): Demonstrating dynamic stiffening across the diagonal X-braced truss sub-frame.</figcaption>
+            <!-- Top-Right: Mode 1 (With Stiffeners) -->
+            <figure class="modal-plot-card">
+              <div class="modal-plot-img-wrap">
+                <img src="media/fea-modal-mode1-with-stiffeners.png" alt="Mode 1 (With Stiffeners) - Natural Frequency 109.81 Hz (Deformation Scale: 3.88)" loading="eager" decoding="sync">
+              </div>
+              <figcaption class="modal-quad-caption">
+                <strong class="modal-quad-title">Mode 1 (With Stiffeners)</strong>
+                <span class="modal-quad-sub"><em>f</em>₁ = 109.81 Hz · Diagonal X-Braced Truss Grid</span>
+              </figcaption>
+            </figure>
+
+            <!-- Bottom-Left: Mode 2 (No Stiffeners) -->
+            <figure class="modal-plot-card">
+              <div class="modal-plot-img-wrap">
+                <img src="media/fea-modal-mode2-no-stiffeners.png" alt="Mode 2 (No Stiffeners) - Natural Frequency 109.97 Hz (Deformation Scale: 2.60)" loading="eager" decoding="sync">
+              </div>
+              <figcaption class="modal-quad-caption">
+                <strong class="modal-quad-title">Mode 2 (No Stiffeners)</strong>
+                <span class="modal-quad-sub"><em>f</em>₂ = 109.97 Hz · Baseline Flexible Layout</span>
+              </figcaption>
+            </figure>
+
+            <!-- Bottom-Right: Mode 2 (With Stiffeners) -->
+            <figure class="modal-plot-card">
+              <div class="modal-plot-img-wrap">
+                <img src="media/fea-modal-mode2-with-stiffeners.png" alt="Mode 2 (With Stiffeners) - Natural Frequency 128.40 Hz (Deformation Scale: 1.84)" loading="eager" decoding="sync">
+              </div>
+              <figcaption class="modal-quad-caption">
+                <strong class="modal-quad-title">Mode 2 (With Stiffeners)</strong>
+                <span class="modal-quad-sub"><em>f</em>₂ = 128.40 Hz · Diagonal X-Braced Truss Grid</span>
+              </figcaption>
             </figure>
           </div>
 

@@ -64,7 +64,7 @@ document.querySelectorAll('[data-compare]').forEach(container => {
   }
 });
 
-const reviewImages = [...document.querySelectorAll('.project-gallery img, .project-cover-image img')];
+const reviewImages = [...document.querySelectorAll('.project-gallery img, .project-cover-image img, .modal-quad-grid img')];
 
 if (reviewImages.length) {
   const dialog = document.createElement('dialog');
