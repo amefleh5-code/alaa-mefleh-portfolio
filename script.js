@@ -2,6 +2,68 @@ document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
+// Initialize interactive comparison sliders
+document.querySelectorAll('[data-compare]').forEach(container => {
+  const slider = container.matches('.compare-slider') ? container : container.querySelector('.compare-slider');
+  if (!slider) return;
+  const handle = slider.querySelector('.compare-handle');
+  let isDragging = false;
+
+  const updatePosition = clientX => {
+    const rect = slider.getBoundingClientRect();
+    let x = clientX - rect.left;
+    let percent = (x / rect.width) * 100;
+    percent = Math.max(0, Math.min(100, percent));
+    slider.style.setProperty('--compare-pos', `${percent}%`);
+    if (handle) {
+      handle.setAttribute('aria-valuenow', Math.round(percent));
+    }
+  };
+
+  const startDrag = e => {
+    isDragging = true;
+    updatePosition(e.touches ? e.touches[0].clientX : e.clientX);
+    document.body.style.cursor = 'ew-resize';
+  };
+
+  const onDrag = e => {
+    if (!isDragging) return;
+    updatePosition(e.touches ? e.touches[0].clientX : e.clientX);
+  };
+
+  const stopDrag = () => {
+    if (isDragging) {
+      isDragging = false;
+      document.body.style.cursor = '';
+    }
+  };
+
+  slider.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('mouseup', stopDrag);
+
+  slider.addEventListener('touchstart', startDrag, { passive: true });
+  window.addEventListener('touchmove', onDrag, { passive: true });
+  window.addEventListener('touchend', stopDrag);
+
+  if (handle) {
+    handle.addEventListener('keydown', e => {
+      let current = parseFloat(slider.style.getPropertyValue('--compare-pos') || '50');
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        current = Math.max(0, current - 5);
+        slider.style.setProperty('--compare-pos', `${current}%`);
+        handle.setAttribute('aria-valuenow', Math.round(current));
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        current = Math.min(100, current + 5);
+        slider.style.setProperty('--compare-pos', `${current}%`);
+        handle.setAttribute('aria-valuenow', Math.round(current));
+      }
+    });
+  }
+});
+
 const reviewImages = [...document.querySelectorAll('.project-gallery img, .project-cover-image img')];
 
 if (reviewImages.length) {

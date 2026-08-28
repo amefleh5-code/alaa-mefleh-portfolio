@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="FEA case study: API 610 (OH2) process pump baseplate dynamic resonance mitigation, sub-frame structural optimization, modal analysis, and static rigidity assessment.">
+  <title>API 610 (OH2) Pump Baseplate FEA &amp; Dynamic Resonance Optimization | Ala'Aldin Mefleh</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-mark">AM</span>
+      <span class="brand-copy"><strong>Ala'Aldin Mefleh</strong><span>Steel Structure &amp; FEA Engineer</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html">FEA &amp; CFD</a>
+      <a href="../../../index.html#projects">Projects</a>
+      <a href="../../../index.html#skills">Skills</a>
+      <a href="../../../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="mailto:amefleh5@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="project-detail">
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../../../index.html">Home</a> / <a href="../index.html">FEA &amp; CFD Projects</a> / API 610 (OH2) Pump Baseplate FEA
+      </div>
+      <div class="kicker">Finite Element Analysis · Dynamic Resonance Mitigation · API 610 / PIP Standards</div>
+      <h1>API 610 (OH2) Pump Baseplate FEA &amp; Dynamic Resonance Optimization</h1>
+      <p>Sub-frame structural redesign of a 2.0 m × 2.0 m process pump skid to eliminate a critical resonance condition at the 2× motor operating harmonic (98.33 Hz), achieving an optimal +11.67% separation margin and a 35.1% deflection reduction.</p>
+      
+      <div class="project-meta" style="margin-top: 18px;">
+        <span class="tag">Finite Element Analysis (FEA)</span>
+        <span class="tag">Structural Optimization</span>
+        <span class="tag">Modal Analysis</span>
+        <span class="tag">Vibration &amp; Resonance Mitigation</span>
+        <span class="tag">API 610 / PIP Standards</span>
+        <span class="tag">SolidWorks Simulation</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Interactive Compare Slider: Before (Parallel Ribs) vs After (X-Braced Grid) -->
+    <div class="compare-container">
+      <div class="compare-slider" data-compare>
+        <!-- After: Optimized X-Braced Grid -->
+        <div class="compare-slide compare-after">
+          <img src="media/subframe-optimized-x-brace.png" alt="Optimized sub-frame layout with diagonal X-braced truss grid">
+          <span class="compare-badge compare-badge-after">Optimized: Diagonal X-Braced Grid (f₁ = 109.81 Hz)</span>
+        </div>
+        <!-- Before: Baseline Parallel Straight Ribs -->
+        <div class="compare-slide compare-before">
+          <img src="media/subframe-baseline-parallel-ribs.png" alt="Baseline sub-frame layout with parallel straight ribs">
+          <span class="compare-badge compare-badge-before">Baseline: Parallel Straight Ribs (f₁ = 96.28 Hz)</span>
+        </div>
+        <!-- Drag Handle -->
+        <div class="compare-handle" role="slider" aria-label="Compare baseline and optimized sub-frame geometry" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+          <div class="compare-handle-line"></div>
+          <div class="compare-handle-button" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="compare-caption">
+        <span>↔ Drag slider or use <kbd>←</kbd> <kbd>→</kbd> arrow keys to compare Baseline parallel ribs vs. Optimized X-braced truss layout</span>
+      </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="detail-layout">
+      <div class="detail-copy">
+        
+        <!-- Section 1: Executive Summary & Problem Statement -->
+        <section>
+          <h2>1. Executive Summary &amp; Problem Statement</h2>
+          <p>
+            Process pump skids operating under API 610 and PIP criteria require rigorous dynamic separation to avoid structural resonance excited by rotating machinery harmonics. In continuous industrial duty, resonance amplification leads to premature bearing failure, mechanical seal leakage, and severe shaft misalignment.
+          </p>
+          <div class="specs-grid" style="margin-top: 16px;">
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Engineering Objective</span>
+                <span class="spec-tag">Resonance Avoidance</span>
+              </div>
+              <div class="spec-value" style="font-size: 1.2rem;">Skid Optimization</div>
+              <p class="spec-desc">Redesign and optimize the sub-frame stiffening layout of a 2.0 m × 2.0 m process pump skid to eliminate a critical structural resonance condition occurring at the 2× operating harmonic of a 2950 RPM motor.</p>
+            </article>
+
+            <article class="spec-card" style="border-color: rgba(239,68,68,0.4);">
+              <div class="spec-card-top">
+                <span class="spec-label" style="color: #f87171;">Critical Challenge</span>
+                <span class="badge-hazard" style="font-size: 0.65rem;">-2.08% Margin</span>
+              </div>
+              <div class="spec-value" style="color: #fca5a5; font-size: 1.2rem;">Resonance Proximity</div>
+              <p class="spec-desc">The baseline baseplate design exhibited a fundamental natural frequency of <strong>96.28 Hz</strong>, sitting dangerously close (-2.08%) to the 2× motor harmonic (<strong>98.33 Hz</strong>), creating severe dynamic amplification risks.</p>
+            </article>
+
+            <article class="spec-card" style="border-color: rgba(34,197,94,0.4);">
+              <div class="spec-card-top">
+                <span class="spec-label" style="color: #4ade80;">Engineered Solution</span>
+                <span class="badge-safe" style="font-size: 0.65rem;">+11.67% Safe</span>
+              </div>
+              <div class="spec-value" style="color: #86efac; font-size: 1.2rem;">X-Braced Truss Grid</div>
+              <p class="spec-desc">Replaced parallel straight ribs with an engineered diagonal X-braced truss grid beneath equipment pedestals, shifting Mode 1 by <strong>+14.05% to 109.81 Hz</strong> (+11.67% safe margin) while reducing deflections by <strong>35.1%</strong>.</p>
+            </article>
+          </div>
+
+          <div class="project-note" style="margin-top: 20px;">
+            <strong>Dynamic Harmonic Context:</strong> A 2-pole electric induction motor operating at 2950 RPM has a fundamental 1× running frequency of 49.17 Hz and a secondary 2× misalignment/vibration harmonic of <strong>98.33 Hz</strong>. Standard API 610 / PIP practices require a minimum natural frequency separation margin of <strong>&plusmn;10% to &plusmn;20%</strong> (exclusion band: 88.50 Hz – 108.16 Hz) to prevent destructive resonance.
+          </div>
+        </section>
+
+        <!-- Section 2: Technical Specifications & FEA Setup -->
+        <section>
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Model &amp; Boundary Parameters</div>
+              <h2>2. Technical Specifications &amp; FEA Setup</h2>
+            </div>
+            <p>Comprehensive setup parameters, foundation bedding elasticity, and mesh verification metrics.</p>
+          </div>
+
+          <div class="specs-grid">
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Envelope Dimensions</span>
+                <span class="spec-tag">Structural Frame</span>
+              </div>
+              <div class="spec-value">2000 × 2000 <span>mm</span></div>
+              <p class="spec-desc">Fabricated structural steel baseplate skid with heavy peripheral C-channels, internal transverse web gussets, and anchor points.</p>
+            </article>
+
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Structural Mass &amp; Ratio</span>
+                <span class="spec-tag">API 610 Pass</span>
+              </div>
+              <div class="spec-value">852 <span>kg</span></div>
+              <p class="spec-desc">Total fabricated steel skid mass. Mass ratio of <strong>1.85×</strong> relative to total rotating equipment mass (compliant with API 610 / PIP standards).</p>
+            </article>
+
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Pump Wet End Mass</span>
+                <span class="spec-tag">Remote Mass 1</span>
+              </div>
+              <div class="spec-value">260 <span>kg</span></div>
+              <p class="spec-desc">Goulds 3700 OH2 process pump mounted via rigid centerline pedestals to maintain thermal centerline elevation and alignment.</p>
+            </article>
+
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Electric Motor Mass</span>
+                <span class="spec-tag">Remote Mass 2</span>
+              </div>
+              <div class="spec-value">200 <span>kg</span></div>
+              <p class="spec-desc">IEC 180M frame electric motor on dedicated machined mounting pad (250 mm × 340 mm bolt pattern). Total rotating assembly: <strong>460 kg (~4.51 kN)</strong>.</p>
+            </article>
+
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Foundation Bedding</span>
+                <span class="spec-tag">Elastic Support</span>
+              </div>
+              <div class="spec-value">200 / 50 <span>MPa/m</span></div>
+              <p class="spec-desc">Grout &amp; concrete elastic foundation bedding. Normal stiffness <em>k<sub>n</sub></em> = <strong>200 MPa/m</strong> (200,000,000 N/m³); Shear stiffness <em>k<sub>t</sub></em> = <strong>50 MPa/m</strong> (50,000,000 N/m³).</p>
+            </article>
+
+            <article class="spec-card">
+              <div class="spec-card-top">
+                <span class="spec-label">Mesh Discretization</span>
+                <span class="spec-tag">High-Order Solid</span>
+              </div>
+              <div class="spec-value">624k <span>nodes</span></div>
+              <p class="spec-desc">322,267 parabolic 10-node solid tetrahedral elements (16 Jacobian points). <strong>84.7%</strong> elements with Aspect Ratio &lt; 3.0, <strong>0%</strong> distorted elements.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Section 3: Dynamic Modal & Resonance Analysis -->
+        <section>
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Vibration &amp; Modal Spectrum</div>
+              <h2>3. Dynamic Modal &amp; Resonance Analysis</h2>
+            </div>
+            <p>Side-by-side modal frequency shift highlighting resonance avoidance across the primary 5 modes.</p>
+          </div>
+
+          <!-- Resonance Visual Spectrum Bar -->
+          <div class="resonance-diagram">
+            <div class="resonance-diagram-header">
+              <span class="resonance-diagram-title">Motor 2× Harmonic (98.33 Hz) vs. Mode 1 Frequency Separation Band</span>
+              <div class="resonance-legend">
+                <span class="legend-item"><span class="legend-dot hazard"></span> Baseline Mode 1 (96.28 Hz, Hazard)</span>
+                <span class="legend-item"><span class="legend-dot motor"></span> 2× Motor Harmonic (98.33 Hz)</span>
+                <span class="legend-item"><span class="legend-dot safe"></span> Optimized Mode 1 (109.81 Hz, Safe)</span>
+              </div>
+            </div>
+            <div class="resonance-bar-track">
+              <!-- API 610 Exclusion Band 88.50 Hz to 108.16 Hz -->
+              <div class="resonance-zone-band" title="API 610 ±10% Exclusion Band (88.50 Hz - 108.16 Hz)">
+                API 610 &plusmn;10% Exclusion Zone [88.5 – 108.2 Hz]
+              </div>
+              <div class="resonance-pin pin-baseline" title="Baseline Mode 1: 96.28 Hz (Inside hazard band)"></div>
+              <div class="resonance-pin pin-motor" title="2x Motor Harmonic: 98.33 Hz"></div>
+              <div class="resonance-pin pin-optimized" title="Optimized Mode 1: 109.81 Hz (Safely outside exclusion band)"></div>
+            </div>
+            <div class="resonance-scale-labels">
+              <span>80.0 Hz</span>
+              <span>88.5 Hz (Lower Limit)</span>
+              <span>98.33 Hz (2× Motor Speed)</span>
+              <span>108.16 Hz (Upper Limit)</span>
+              <span>109.81 Hz (Optimized)</span>
+              <span>120.0 Hz</span>
+            </div>
+          </div>
+
+          <!-- Modal Comparison Table -->
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Vibration Parameter / Mode</th>
+                  <th>Baseline (Parallel Ribs)</th>
+                  <th>Optimized (X-Braced Grid)</th>
+                  <th>Engineering Delta</th>
+                  <th>API 610 Standard &amp; Behavior</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Mode 1 Frequency (<em>f</em>₁)</strong></td>
+                  <td>96.28 Hz</td>
+                  <td class="highlight-cell">109.81 Hz</td>
+                  <td><span class="badge-increase">+14.05% Increase</span></td>
+                  <td>Global vertical flexure mode shifted above harmonic</td>
+                </tr>
+                <tr>
+                  <td><strong>Mode 1 Mass Participation (<em>Y</em>)</strong></td>
+                  <td>60.04%</td>
+                  <td class="highlight-cell">63.20%</td>
+                  <td><span class="badge-increase">+3.16% Pts</span></td>
+                  <td>Preserves unified vertical global mode response</td>
+                </tr>
+                <tr>
+                  <td><strong>2× Harmonic Separation Margin (98.33 Hz)</strong></td>
+                  <td><span class="badge-hazard">-2.08% (Resonance Hazard)</span></td>
+                  <td><span class="badge-safe">+11.67% (Safe Margin)</span></td>
+                  <td><span class="badge-safe">+13.75% Shift</span></td>
+                  <td><span class="badge-safe">Passes &ge; 10% API 610 Criterion</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Mode 2 Frequency (<em>f</em>₂)</strong></td>
+                  <td>109.97 Hz</td>
+                  <td class="highlight-cell">128.40 Hz</td>
+                  <td><span class="badge-increase">+16.76% Increase</span></td>
+                  <td>Torsional / rocking mode stiffness enhanced</td>
+                </tr>
+                <tr>
+                  <td><strong>Mode 3 Frequency (<em>f</em>₃)</strong></td>
+                  <td>132.13 Hz</td>
+                  <td class="highlight-cell">161.73 Hz</td>
+                  <td><span class="badge-increase">+22.40% Increase</span></td>
+                  <td>Transverse flexural mode shifted upward</td>
+                </tr>
+                <tr>
+                  <td><strong>Mode 4 Frequency (<em>f</em>₄)</strong></td>
+                  <td>154.57 Hz</td>
+                  <td class="highlight-cell">183.83 Hz</td>
+                  <td><span class="badge-increase">+18.93% Increase</span></td>
+                  <td>Longitudinal bending mode stabilized</td>
+                </tr>
+                <tr>
+                  <td><strong>Mode 5 Frequency (<em>f</em>₅)</strong></td>
+                  <td>162.48 Hz</td>
+                  <td class="highlight-cell">193.24 Hz</td>
+                  <td><span class="badge-increase">+18.93% Increase</span></td>
+                  <td>High-order localized pedestal mode separation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 4: Static Rigidity & Stress Performance -->
+        <section>
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Static Integrity &amp; Rigidity</div>
+              <h2>4. Static Rigidity &amp; Stress Performance</h2>
+            </div>
+            <p>Quantitative verification under total equipment gravity and operational alignment loads.</p>
+          </div>
+
+          <div class="results-grid">
+            <article class="result-card">
+              <small>Resultant Deflection (<em>U<sub>res</sub></em>)</small>
+              <strong>0.0477 <span>mm</span></strong>
+              <p>Reduced from <strong>0.0735 mm</strong> to <strong>0.0477 mm (-35.1%)</strong>, preserving precise pump-motor shaft alignment and bearing life.</p>
+            </article>
+
+            <article class="result-card">
+              <small>Peak von Mises Stress</small>
+              <strong>21.89 <span>MPa</span></strong>
+              <p>Reduced from <strong>25.69 MPa</strong> to <strong>21.89 MPa (-14.8%)</strong>, eliminating local stress concentrations under equipment pedestals.</p>
+            </article>
+
+            <article class="result-card">
+              <small>Minimum Factor of Safety (FoS)</small>
+              <strong>11.0</strong>
+              <p>Increased from <strong>9.7 to 11.0</strong> against ASTM A36 structural steel yield strength (<em>S<sub>y</sub></em> = 250 MPa).</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Section 5: Media & Gallery -->
+        <section>
+          <div class="results-heading">
+            <div>
+              <div class="kicker">Visual FEA Gallery</div>
+              <h2>5. Engineering Verification &amp; Simulation Plots</h2>
+            </div>
+            <p>Click any high-resolution plot to inspect in full-screen lightbox mode.</p>
+          </div>
+
+          <div class="project-gallery">
+            <figure>
+              <img src="media/subframe-optimized-x-brace.png" alt="Optimized diagonal X-braced truss sub-frame layout">
+              <figcaption>Optimized sub-frame with diagonal X-bracing transferring equipment loads directly into outer perimeter channels.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/subframe-baseline-parallel-ribs.png" alt="Baseline parallel straight rib sub-frame layout">
+              <figcaption>Baseline sub-frame with parallel straight ribs showing flexible unsupported central spans.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/fea-modal-mode1-optimized.jpg" alt="Mode 1 fundamental modal deformation plot (109.81 Hz)">
+              <figcaption>Mode 1 fundamental vibration mode shape (f₁ = 109.81 Hz, +11.67% safe margin above 2× harmonic).</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/fea-modal-mode2-optimized.jpg" alt="Mode 2 torsional modal deformation plot (128.40 Hz)">
+              <figcaption>Mode 2 torsional and lateral vibration mode shape (f₂ = 128.40 Hz, +16.76% increase over baseline).</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/fea-von-mises-stress.jpg" alt="Static von Mises stress distribution (Peak 21.89 MPa, FoS 11.0)">
+              <figcaption>Static von Mises stress distribution under rotating assembly loads (Peak stress: 21.89 MPa, FoS: 11.0).</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/fea-displacement-distribution.jpg" alt="Static resultant displacement contour (Max Ures 0.0477 mm)">
+              <figcaption>Static resultant displacement distribution (Ures max: 0.0477 mm, -35.1% deflection reduction).</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/mesh-metrics-solidworks.png" alt="SolidWorks Simulation blended curvature-based solid mesh metrics">
+              <figcaption>High-density solid parabolic mesh verification (624,296 nodes, 322,267 elements, 0% distorted elements).</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/boundary-conditions-grout-bedding.png" alt="Foundation bedding elastic support boundary conditions">
+              <figcaption>Elastic foundation bedding configuration (kn = 200 MPa/m, kt = 50 MPa/m) and remote mass coordinate systems.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/baseplate-assembly-loads.png" alt="3D baseplate assembly with pump pedestals and motor mounting pad">
+              <figcaption>Complete 3D baseplate assembly showing Goulds 3700 OH2 centerline pedestals, IEC 180M motor pad, and gravity load vectors.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Detail Sidebar Specifications -->
+      <aside class="detail-aside">
+        <dl>
+          <div>
+            <dt>Category</dt>
+            <dd>Mechanical Design &amp; Structural Integrity</dd>
+          </div>
+          <div>
+            <dt>Equipment Application</dt>
+            <dd>API 610 (OH2) Process Pump Skid</dd>
+          </div>
+          <div>
+            <dt>Applicable Codes</dt>
+            <dd>API 610 12th Ed · PIP RESP002</dd>
+          </div>
+          <div>
+            <dt>Skid Envelope</dt>
+            <dd>2000 mm × 2000 mm (2 m × 2 m)</dd>
+          </div>
+          <div>
+            <dt>Structural Mass</dt>
+            <dd>852 kg (Steel Baseplate)</dd>
+          </div>
+          <div>
+            <dt>Rotating Equipment Mass</dt>
+            <dd>460 kg (Pump 260 kg + Motor 200 kg)</dd>
+          </div>
+          <div>
+            <dt>Mass Ratio</dt>
+            <dd>1.85× (Complies with API 610)</dd>
+          </div>
+          <div>
+            <dt>Operating Motor Speed</dt>
+            <dd>2950 RPM (49.17 Hz / 2× = 98.33 Hz)</dd>
+          </div>
+          <div>
+            <dt>Mode 1 Frequency</dt>
+            <dd>109.81 Hz (+14.05% Shift)</dd>
+          </div>
+          <div>
+            <dt>2× Harmonic Margin</dt>
+            <dd>+11.67% (Safe Separation)</dd>
+          </div>
+          <div>
+            <dt>Static Deflection (Ures)</dt>
+            <dd>0.0477 mm (-35.1% Reduction)</dd>
+          </div>
+          <div>
+            <dt>Peak von Mises Stress</dt>
+            <dd>21.89 MPa (-14.8%)</dd>
+          </div>
+          <div>
+            <dt>Safety Factor (FoS)</dt>
+            <dd>11.0 (Yield: 250 MPa)</dd>
+          </div>
+          <div>
+            <dt>Foundation Support</dt>
+            <dd>Elastic Bedding (kn = 200 MPa/m)</dd>
+          </div>
+          <div>
+            <dt>FEA Solver</dt>
+            <dd>SolidWorks Simulation</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span data-year></span> Ala'Aldin Abdullah Mefleh Mefleh</span>
+    <a href="../index.html">Back to FEA &amp; CFD projects</a>
+  </div>
+</footer>
+
+<script src="../../../script.js"></script>
+</body>
+</html>
