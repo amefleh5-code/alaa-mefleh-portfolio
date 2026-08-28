@@ -339,50 +339,84 @@
             <p>Click any high-resolution plot to inspect in full-screen lightbox mode.</p>
           </div>
 
+          <!-- Subsection: Dynamic Modal Analysis -->
+          <h3 style="font-size: 1.05rem; margin: 24px 0 8px; color: var(--accent-2);">Dynamic Modal Frequency Plots</h3>
           <div class="project-gallery">
-            <figure>
+            <figure class="gallery-span-full">
               <img src="media/fea-modal-modes-1-2-top-view.png" alt="Dynamic Modal Analysis Top View: Mode 1 (96.28 Hz vs 109.81 Hz) and Mode 2 (109.97 Hz vs 128.40 Hz)">
               <figcaption>Modal Shape 1 &amp; 2 deformation plots (Top 3D View): Baseline (96.28 Hz &amp; 109.97 Hz) vs. Optimized (109.81 Hz &amp; 128.40 Hz).</figcaption>
             </figure>
 
-            <figure>
+            <figure class="gallery-span-full">
               <img src="media/fea-modal-modes-1-2-bottom-view.png" alt="Dynamic Modal Analysis Bottom View: Mode 1 (96.28 Hz vs 109.81 Hz) and Mode 2 (109.97 Hz vs 128.40 Hz)">
-              <figcaption>Modal Shape 1 &amp; 2 deformation plots (Bottom 3D View): Highlighting dynamic stiffening across the diagonal X-braced sub-frame.</figcaption>
+              <figcaption>Modal Shape 1 &amp; 2 deformation plots (Bottom 3D View): Demonstrating dynamic stiffening across the diagonal X-braced truss sub-frame.</figcaption>
             </figure>
+          </div>
 
-            <figure>
+          <!-- Subsection: Static Rigidity & Stress Performance -->
+          <h3 style="font-size: 1.05rem; margin: 28px 0 8px; color: var(--accent-2);">Static Rigidity, Stress &amp; Safety Factor Plots</h3>
+          <div class="project-gallery">
+            <figure class="gallery-span-full">
               <img src="media/fea-stress-displacement-quad-comparison.png" alt="Static von Mises Stress (25.69 MPa vs 21.89 MPa) and Displacement (0.0735 mm vs 0.0477 mm) Comparison">
               <figcaption>Static FEA comparison: von Mises stress (25.69 MPa → 21.89 MPa, -14.8%) &amp; resultant displacement (0.0735 mm → 0.0477 mm, -35.1%).</figcaption>
             </figure>
 
-            <figure>
+            <figure class="gallery-span-full">
               <img src="media/fea-factor-of-safety-comparison.png" alt="Factor of Safety Comparison: Min FoS 9.7 (Baseline) vs Min FoS 11.0 (Optimized)">
               <figcaption>Minimum Factor of Safety distribution: Increased from 9.7 (Baseline) to 11.0 (Optimized) under rotating assembly gravity loads.</figcaption>
             </figure>
+          </div>
 
+          <!-- Subsection: Equipment Remote Mass Loads -->
+          <h3 style="font-size: 1.05rem; margin: 28px 0 8px; color: var(--accent-2);">Applied Equipment Remote Loads &amp; Force Vectors</h3>
+          <div class="project-gallery">
             <figure>
-              <img src="media/subframe-optimized-x-brace.png" alt="Optimized diagonal X-braced truss sub-frame layout">
-              <figcaption>Optimized sub-frame CAD geometry with diagonal X-bracing transferring equipment loads directly into outer perimeter channels.</figcaption>
+              <img src="media/pump-remote-mass-load-260kg.png" alt="Goulds 3700 OH2 Pump Wet End Remote Mass Load: 260 kg (-2,600 N Y-direction force)">
+              <figcaption>Pump wet end remote mass setup: 260 kg (-2,600 N Y-force) transferred through Goulds 3700 OH2 centerline support pedestals.</figcaption>
             </figure>
 
             <figure>
-              <img src="media/subframe-baseline-parallel-ribs.png" alt="Baseline parallel straight rib sub-frame layout">
-              <figcaption>Baseline sub-frame CAD geometry with parallel straight ribs showing flexible unsupported central spans.</figcaption>
+              <img src="media/motor-remote-mass-load-200kg.png" alt="IEC 180M Electric Motor Remote Mass Load: 200 kg (-2,000 N Y-direction force)">
+              <figcaption>Electric motor remote mass setup: 200 kg (-2,000 N Y-force) applied at IEC 180M motor bolt pattern (250 mm × 340 mm).</figcaption>
+            </figure>
+
+            <figure class="gallery-span-full">
+              <img src="media/baseplate-assembly-loads.png" alt="3D baseplate assembly with pump pedestals, motor mounting pad, and gravity load vector">
+              <figcaption>Complete 3D baseplate assembly showing combined remote masses, coordinate systems, and gravity load vector.</figcaption>
+            </figure>
+          </div>
+
+          <!-- Subsection: Restraints, Bedding & Mesh -->
+          <h3 style="font-size: 1.05rem; margin: 28px 0 8px; color: var(--accent-2);">Boundary Conditions, Restraints &amp; Mesh Quality</h3>
+          <div class="project-gallery">
+            <figure>
+              <img src="media/restraint-reference-geometry-plane.png" alt="Reference geometry restraint along front plane: Direction 1 & Normal = 0 mm">
+              <figcaption>Reference plane restraint configuration: Direction 1 = 0 mm, Normal to plane = 0 mm across structural alignment planes.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/restraint-bottom-flange-direction2.png" alt="Bottom flange reference geometry restraint: Direction 2 = 0 mm">
+              <figcaption>Bottom flange restraint condition: Direction 2 = 0 mm along baseplate bottom structural flanges.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="media/boundary-conditions-grout-bedding.png" alt="Foundation bedding elastic support: kn = 200 MPa/m, kt = 50 MPa/m">
+              <figcaption>Elastic foundation bedding support: Normal stiffness kn = 200 MPa/m, Shear stiffness kt = 50 MPa/m.</figcaption>
             </figure>
 
             <figure>
               <img src="media/mesh-metrics-solidworks.png" alt="SolidWorks Simulation blended curvature-based solid mesh metrics">
-              <figcaption>High-density solid parabolic mesh verification (624,296 nodes, 322,267 elements, 0% distorted elements).</figcaption>
+              <figcaption>High-density solid parabolic mesh metrics: 624,296 nodes, 322,267 elements, 84.7% elements AR &lt; 3.0, 0% distorted elements.</figcaption>
             </figure>
 
             <figure>
-              <img src="media/boundary-conditions-grout-bedding.png" alt="Foundation bedding elastic support boundary conditions">
-              <figcaption>Elastic foundation bedding configuration (kn = 200 MPa/m, kt = 50 MPa/m) and remote mass coordinate systems.</figcaption>
+              <img src="media/subframe-optimized-x-brace.png" alt="Optimized diagonal X-braced truss sub-frame layout">
+              <figcaption>Optimized sub-frame CAD geometry: Diagonal X-braced truss transferring loads directly into perimeter channels.</figcaption>
             </figure>
 
             <figure>
-              <img src="media/baseplate-assembly-loads.png" alt="3D baseplate assembly with pump pedestals and motor mounting pad">
-              <figcaption>Complete 3D baseplate assembly showing Goulds 3700 OH2 centerline pedestals, IEC 180M motor pad, and gravity load vectors.</figcaption>
+              <img src="media/subframe-baseline-parallel-ribs.png" alt="Baseline parallel straight rib sub-frame layout">
+              <figcaption>Baseline sub-frame CAD geometry: Parallel straight ribs showing central flexibility prior to optimization.</figcaption>
             </figure>
           </div>
         </section>
