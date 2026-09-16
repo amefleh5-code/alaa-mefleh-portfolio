@@ -96,20 +96,31 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .engineering-card {
   position:relative; min-height:480px; border:1px solid var(--line); border-radius:var(--radius-lg);
-  background: linear-gradient(165deg, rgba(18,35,53,.93), rgba(9,21,33,.8)); overflow:hidden; box-shadow:var(--shadow);
+  background-color:#07101a; overflow:hidden; box-shadow:var(--shadow);
 }
-.engineering-card::before, .engineering-card::after { content:""; position:absolute; border:1px solid rgba(103,182,230,.24); border-radius:50%; }
-.engineering-card::before { width:290px; height:290px; right:-75px; top:-55px; }
-.engineering-card::after { width:170px; height:170px; right:-15px; top:5px; }
-.blueprint-lines { position:absolute; inset:0; opacity:.55; background-image:linear-gradient(rgba(103,182,230,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(103,182,230,.06) 1px,transparent 1px); background-size:28px 28px; }
-.structure-graphic { position:absolute; inset:38px; display:grid; place-items:center; }
-.structure-graphic svg { width:100%; height:100%; filter: drop-shadow(0 18px 35px rgba(0,0,0,.25)); }
+.engineering-card-bg {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center; border-radius:inherit;
+  filter:brightness(.72) contrast(1.1) saturate(.85);
+  transform:scale(1);
+  transition:transform .6s cubic-bezier(.16,1,.3,1), filter .6s ease;
+}
+.engineering-card:hover .engineering-card-bg {
+  transform:scale(1.035);
+  filter:brightness(.78) contrast(1.12) saturate(.95);
+}
+.engineering-card-scrim {
+  position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(180deg, rgba(6,17,26,.22) 0%, rgba(6,17,26,.5) 42%, rgba(6,17,26,.95) 100%),
+             radial-gradient(circle at 50% 30%, transparent 40%, rgba(6,17,26,.6) 100%);
+}
 .engineering-badge {
-  position:absolute; left:26px; bottom:26px; right:26px; padding:18px 20px; border:1px solid var(--line);
-  background:rgba(7,16,26,.72); backdrop-filter:blur(12px); border-radius:16px;
+  position:absolute; left:24px; bottom:24px; right:24px; z-index:2; padding:18px 20px; border:1px solid var(--line-strong);
+  background:rgba(7,16,26,.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);
 }
 .engineering-badge small { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-weight:800; }
-.engineering-badge strong { display:block; font-size:1.05rem; margin-top:6px; }
+.engineering-badge strong { display:block; font-size:1.05rem; margin-top:6px; color:#f2f7fc; }
 .engineering-badge p { color:var(--muted); margin:6px 0 0; font-size:.84rem; line-height:1.5; }
 
 .section { padding: 86px 0; }
@@ -681,8 +692,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .about-grid { grid-template-columns:1fr; gap:24px; }
   .about-portrait-wrap { max-width:280px; margin:0 auto; width:100%; }
   .about-meta { flex-direction:column; gap:10px; }
-  .engineering-card { min-height:310px; }
-  .structure-graphic { inset:18px; }
+  .engineering-card { min-height:330px; }
+  .engineering-badge { left:16px; right:16px; bottom:16px; padding:14px 16px; }
   .section { padding:62px 0; }
   .section-header { display:block; }
   .section-header p { margin-top:14px; }
